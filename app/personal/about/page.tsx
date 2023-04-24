@@ -1,3 +1,5 @@
+'use client'
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -17,8 +19,8 @@ const About = () => {
           <div className="flex flex-wrap -mx-4">
             <div className="w-full md:w-1/2 px-4 mb-8">
             <Image
-                width={100}
-                height={100}
+                width={1000}
+                height={1000}
                 className="w-full rounded-md"
                 src="/profile/me.JPG"
                 alt='1'

@@ -1,16 +1,13 @@
+'use client'
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
-
-
-
-
-const Index = () => {
+const page = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Head>
-        <title>Home | Rhesa Davonanto</title>
+        <title>Home | Rhesa Davinanto</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -41,4 +38,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default page;
