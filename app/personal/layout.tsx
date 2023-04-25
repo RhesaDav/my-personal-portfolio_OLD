@@ -15,12 +15,10 @@ export default function PersonalLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>
+      <div>
         <Navbar/>
         {children}
         <Footer/>
-      </body>
-    </html>
+      </div>
   )
 }
