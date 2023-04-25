@@ -1,4 +1,3 @@
-'use client'
 import { usePathname } from "next/navigation"
 import { Fragment } from "react"
 import Navbar from "../../components/common/Navbar"
