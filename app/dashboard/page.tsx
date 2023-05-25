@@ -2,13 +2,16 @@
 import Head from "next/head";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { supabase } from "../../lib/supabaseClient";
 
-export default function Dashboard() {
+export default async function Dashboard() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const router = useRouter();
+  const data = await supabase.from('Users').select('*')
+  console.log(data)
 
   const handleLogin = async (event: any) => {
     event.preventDefault();
@@ -16,25 +19,6 @@ export default function Dashboard() {
     setError("");
 
     try {
-      // Here you can do your API request
-      // Example: const response = await fetch("your-api-url/login", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify({ email, password }),
-      // });
-
-      // Here you can check the response status and do the necessary actions
-      // Example: const data = await response.json();
-      // if (response.ok) {
-      //   setIsLoading(false);
-      //   router.push("/dashboard");
-      // } else {
-      //   setIsLoading(false);
-      //   setError(data.message);
-      // }
-
       setIsLoading(false);
       router.push("/dashboard");
     } catch (error) {

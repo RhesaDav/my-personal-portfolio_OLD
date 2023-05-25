@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import ProjectCard from "../../../../components/project/ProjectCard";
 
 export default function Project() {
   return (
@@ -12,6 +13,7 @@ export default function Project() {
           Here you can manage your portfolio website
         </p>
       </div>
+      <ProjectCard project={project} />
     </main>
   );
 }
